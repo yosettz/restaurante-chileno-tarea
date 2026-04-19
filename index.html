@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Restaurante Tradición Chilena</title>
+
+<meta charset="UTF-8">
+<title>Restaurante Tradición Chilena</title>
+
+<link rel="stylesheet" href="tablas.css">
+
+<style>
+
+@import url("promociones.css");
+
+</style>
+
 </head>
+
+<style>
+
+/* Estilo para la sección quienes somos */
+
+#quienes {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Encabezado Quienes somos */
+
+#quienes h2 {
+    color: #8B0000;
+    font-family: Arial;
+    text-align: center;
+}
+
+/* Párrafos */
+
+#quienes p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
+
+</style>
 
 <body style="background-color:#fff8dc; font-family:Verdana;">
 
+<div style="text-align:right; background-color:#94000c; padding:10px;">
+
+    <a href="#acceso" 
+    style="color:white; margin-right:15px; text-decoration:none; font-weight:bold;">
+    Acceder
+    </a>
+
+    <a href="#registro" 
+    style="color:white; text-decoration:none; font-weight:bold;">
+    Registrarse
+    </a>
+
+</div>
 
     <h1 style="color:#8B0000;">Restaurante Tradición Chilena</h1>
 
     <p><b>Tradición Chilena Ltda.</b></p>
     <p><b>Dirección:</b> Av. Apoquindo 4499, Santiago</p>
-    <h2 style="color:#1f1c1c;">¿Quiénes somos?</h2>
+   
+    <section id="quienes">
 
-<p>Somos un restaurante especializado en gastronomía chilena que ofrece platos tradicionales con ingredientes frescos.</p>
-<p>Ubicados en Av. Apoquindo 4499, Santiago, brindamos una experiencia única para nuestros clientes.</p>
+<h2>¿Quiénes somos?</h2>
+
+<p>
+Somos un restaurante especializado en gastronomía chilena que ofrece 
+platos tradicionales con ingredientes frescos.
+</p>
+
+<p>
+Ubicados en Av. Apoquindo 4499, Santiago, brindamos una experiencia 
+única para nuestros clientes.
+</p>
+
+</section>
 
 <video width="400" controls>
     <source src="video.mp4" type="video/mp4">
@@ -31,7 +95,8 @@
     <a href="#postres">Postres</a> |
     <a href="#especialidades">Especialidades</a> |
     <a href="#promociones">Promociones</a> |
-    <a href="#plato-semana">Plato de la semana</a>
+    <a href="#plato-semana">Plato de la semana</a> |
+     <a href="#videos">Videos Relacionados</a> |
 
 </nav>
 
@@ -214,6 +279,94 @@ Wikipedia
     </li>
 
 </ul>
+
+<hr>
+
+<h2 id="videos" style="color:#8B0000;">Videos relacionados</h2>
+
+<p>Aprende cómo preparar uno de nuestros platos insignia:</p>
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/n_HGtfeQt-g">
+</iframe>
+
+<hr>
+
+<h2 id="acceso" style="color:#07233f;">Acceso de usuarios</h2>
+
+<form method="post" action="#">
+
+<label>Usuario:</label><br>
+<input type="text" name="usuario" required>
+
+<br><br>
+
+<label>Contraseña:</label><br>
+<input type="password" name="clave" required>
+
+<br><br>
+
+<input type="submit" value="Enviar">
+
+</form>
+
+<hr>
+
+<h2 id="registro" style="color:#07233f;">Registro usuarios</h2>
+
+<form method="post" action="#">
+
+<label>Nombre y Apellido:</label><br>
+<input type="text" name="nombre" required>
+
+<br><br>
+
+<label>Tipo de documento:</label><br>
+<select name="tipo_documento">
+
+<option>DNI</option>
+<option>RUT</option>
+<option>Cédula</option>
+<option>Pasaporte</option>
+
+</select>
+
+<br><br>
+
+<label>Número de documento:</label><br>
+<input type="text" name="numero_doc">
+
+<br><br>
+
+<label>Fecha de nacimiento:</label><br>
+<input type="date" name="fecha">
+
+<br><br>
+
+<label>Sexo:</label><br>
+
+<input type="radio" name="sexo" value="masculino"> Masculino
+<input type="radio" name="sexo" value="femenino"> Femenino
+
+<br><br>
+
+<label>Correo electrónico:</label><br>
+<input type="email" name="correo">
+
+<br><br>
+
+<label>Teléfono móvil:</label><br>
+<input type="tel" name="telefono">
+
+<br><br>
+
+<label>Comentarios:</label><br>
+<textarea name="comentarios" rows="4" cols="40"></textarea>
+
+<br><br>
+
+<input type="submit" value="Registrar">
+
+</form>
 
 </body>
 </html>

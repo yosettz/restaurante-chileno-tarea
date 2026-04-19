@@ -1,0 +1,11 @@
+ul {
+    list-style-type: square;
+    background-color: #ffe4e1;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
