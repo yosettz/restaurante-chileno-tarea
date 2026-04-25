@@ -13,36 +13,98 @@
 
 </style>
 
-</head>
-
 <style>
 
-/* Estilo para la sección quienes somos */
 
-#quienes {
-    background-color: #fff3cd;
-    padding: 15px;
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+form {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+
+label {
+    font-weight: bold;
+    margin-top: 12px;
+    display: block;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+
+
+.boton-enviar {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Encabezado Quienes somos */
 
-#quienes h2 {
-    color: #8B0000;
-    font-family: Arial;
-    text-align: center;
+.boton-enviar:hover {
+    background-color: #104E8B;
 }
 
-/* Párrafos */
 
-#quienes p {
-    font-size: 16px;
-    color: #333;
-    text-align: justify;
+#acceso {
+    border-top: 6px solid #006400;
+}
+
+
+#registro {
+    border-top: 6px solid #8B0000;
 }
 
 </style>
+
+<style>
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    color: #333333;
+}
+
+h1, h2 {
+    color: #8B0000;
+}
+
+#quienes {
+    background-color: #fff0e0;
+    color: #000000;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#quienes h2 {
+    color: #006400;
+}
+
+</style>
+
+</head>
 
 <body style="background-color:#fff8dc; font-family:Verdana;">
 
@@ -291,80 +353,59 @@ Wikipedia
 
 <hr>
 
-<h2 id="acceso" style="color:#07233f;">Acceso de usuarios</h2>
+<form id="acceso">
 
-<form method="post" action="#">
+<h2>Acceso a la página</h2>
 
-<label>Usuario:</label><br>
-<input type="text" name="usuario" required>
+<label>Usuario:</label>
+<input type="text" name="usuario">
 
-<br><br>
+<label>Contraseña:</label>
+<input type="password" name="clave">
 
-<label>Contraseña:</label><br>
-<input type="password" name="clave" required>
-
-<br><br>
-
-<input type="submit" value="Enviar">
+<input type="submit" value="Ingresar" class="boton-enviar">
 
 </form>
 
 <hr>
 
-<h2 id="registro" style="color:#07233f;">Registro usuarios</h2>
+<form id="registro">
 
-<form method="post" action="#">
+<h2>Registro de nuevos usuarios</h2>
 
-<label>Nombre y Apellido:</label><br>
-<input type="text" name="nombre" required>
+<label>Nombre y apellido:</label>
+<input type="text">
 
-<br><br>
-
-<label>Tipo de documento:</label><br>
-<select name="tipo_documento">
-
-<option>DNI</option>
+<label>Tipo de documento:</label>
+<select>
 <option>RUT</option>
+<option>DNI</option>
 <option>Cédula</option>
 <option>Pasaporte</option>
-
 </select>
 
-<br><br>
+<label>Número de documento:</label>
+<input type="text">
 
-<label>Número de documento:</label><br>
-<input type="text" name="numero_doc">
+<label>Fecha de nacimiento:</label>
+<input type="date">
 
-<br><br>
+<label>Sexo:</label>
+<select>
+<option>Masculino</option>
+<option>Femenino</option>
+</select>
 
-<label>Fecha de nacimiento:</label><br>
-<input type="date" name="fecha">
+<label>Correo electrónico:</label>
+<input type="email">
 
-<br><br>
+<label>Teléfono móvil:</label>
+<input type="text">
 
-<label>Sexo:</label><br>
+<label>Comentarios:</label>
+<textarea rows="4"></textarea>
 
-<input type="radio" name="sexo" value="masculino"> Masculino
-<input type="radio" name="sexo" value="femenino"> Femenino
-
-<br><br>
-
-<label>Correo electrónico:</label><br>
-<input type="email" name="correo">
-
-<br><br>
-
-<label>Teléfono móvil:</label><br>
-<input type="tel" name="telefono">
-
-<br><br>
-
-<label>Comentarios:</label><br>
-<textarea name="comentarios" rows="4" cols="40"></textarea>
-
-<br><br>
-
-<input type="submit" value="Registrar">
+<input type="submit" value="Registrar" class="boton-enviar">
 
 </form>
 
