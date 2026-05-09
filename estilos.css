@@ -250,3 +250,69 @@ body {
     }
 }
 
+   DISEÑO GRID
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+    .contenedor-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #quienes {
+        grid-column: 1 / 3;
+    }
+
+    #platos,
+    #bebidas,
+    #postres {
+        grid-column: auto;
+    }
+
+    #especialidades,
+    #promociones,
+    #plato-semana,
+    #videos,
+    #formulario {
+        grid-column: span 1;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1024px) {
+
+    .contenedor-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #quienes {
+        grid-column: 1 / 4;
+    }
+
+    #especialidades {
+        grid-column: 1 / 3;
+    }
+
+    #promociones {
+        grid-column: 3 / 4;
+    }
+
+    #plato-semana {
+        grid-column: 1 / 3;
+    }
+
+    #videos {
+        grid-column: 3 / 4;
+    }
+
+    #formulario {
+        grid-column: 1 / 4;
+    }
+}
